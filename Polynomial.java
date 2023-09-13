@@ -23,15 +23,21 @@ public class Polynomial {
                 result[i] = coefficient[i] + src_polynomial.coefficient[i];
             }
         }
-        Polynomial p_result = new Polynomial(result);
-        return p_result;
+        return new Polynomial(result);
 
     }
 
-    public double evaluate (double x){
+    public double evaluate (double x) {
         double result = 0;
-        for (int i = 0; i < coefficient.length; i++){
-            result = coefficient[i] * Math.pow(x,i) + result;
+        double x_result=1;
+
+        for (int i = 0; i < coefficient.length; i++) {
+            for (int t = i; t>0; t--) {
+                    x_result = x_result * x;
+                }
+
+            result = coefficient[i] * x_result + result;
+            x_result=1;
         }
         return result;
     }
