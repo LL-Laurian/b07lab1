@@ -11,7 +11,7 @@ public class Polynomial {
     }
 
     public Polynomial add (Polynomial src_polynomial) {
-        int max_length = Math.max(coefficient.length, src_polynomial.coefficient.length);
+        int max_length = (coefficient.length >= src_polynomial.coefficient.length)? coefficient.length : src_polynomial.coefficient.length;
         double[] result = new double[max_length];
 
         for (int i = 0; i < max_length; i++) {
