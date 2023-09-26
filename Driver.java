@@ -12,6 +12,5 @@ public class Driver {
             System.out.println("1 is a root of s");
         else
             System.out.println("1 is not a root of s");
-
     }
 }
