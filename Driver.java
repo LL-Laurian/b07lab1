@@ -8,9 +8,14 @@ public class Driver {
         Polynomial p = new Polynomial();
 
         System.out.println(p.evaluate(3));
-        double [] c1 = {6,5};
-        int [] e1 = {0,3};
+        double [] c1 = {6,9,-8,5};
+        int [] e1 = {0,1,4,3};
         Polynomial p1 = new Polynomial(c1,e1);
+        p1.saveToFile("p1");
+        Polynomial p5 = new Polynomial(new File("p1"));
+        System.out.println("p5 coe"+Arrays.toString(p5.coefficient));
+        System.out.println("p5 exp"+Arrays.toString(p5.exponents));
+
         double [] c2 = {-2,-9};
         int [] e2 = {1,4};
         Polynomial p2 = new Polynomial(c2,e2);
@@ -37,6 +42,8 @@ public class Driver {
         sum.saveToFile("abc");
         Polynomial p4 = new Polynomial(new File("abc"));
         System.out.println("p4(0.1) = " + p4.evaluate(0.1));
+
+        */
 
         double [] c6 ={-9,6,-9,6};
         int[] e6 ={1,6,3,0};
@@ -67,7 +74,7 @@ public class Driver {
 
 
 
-*/
+
 
 
 
@@ -104,7 +111,7 @@ public class Driver {
         System.out.println(Arrays.toString(p.coe));
         System.out.println(Arrays.toString(p.exp));
         p.saveToFile("b07lab1/output.txt");
-         */
+
 
 
 
@@ -127,7 +134,7 @@ public class Driver {
         System.out.println("mul coe"+Arrays.toString(m.coefficient));
         System.out.println("mul exp"+Arrays.toString(m.exponents));
 
-
+*/
 
     }
 }

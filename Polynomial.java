@@ -345,10 +345,15 @@ public class Polynomial {
             if (coefficient[i] == 0){
                 content =content + '0';
             }
-            else if (coefficient[i] !=1){
-                content =content + coefficient[i] + 'x';
+            else if (coefficient[i] !=1 ){
+                content =content + coefficient[i];
             }
-            else{ content =content + 'x';}
+            else if (coefficient[i] ==1){
+                content =content;
+            }
+            if( exponents[i] != 0){
+                content = content + "x";
+            }
 
 
             if (exponents[i] != 0){
